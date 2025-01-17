@@ -1,0 +1,58 @@
+section.about-container {
+    display: flex;
+    padding-top: 10px;
+}
+
+.about-title, .about-text {
+    text-align: center;
+    
+}
+
+h1.about-title {
+    margin-top: -40px;
+    margin-bottom: 0;
+}
+
+p.about-text {
+    margin-left: 25.5%;
+    margin-right: 25.5%;
+    
+}
+
+
+@media (max-width: 1024px) {
+
+    p.about-text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    
+  }
+  
+@media (max-width: 720px) {
+
+    p.about-text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h1.about-title {
+        margin-top: 10%;
+    }
+    
+  }
+
+
+@media (max-width: 540px) {
+
+    p.about-text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h1.about-title {
+        margin-top: 5%;
+    }
+    
+  }

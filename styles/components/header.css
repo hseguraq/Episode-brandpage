@@ -1,0 +1,358 @@
+/* General Styles */
+body {
+    margin: 0;
+    background: var(--Primary-White, #FFF);
+
+  }
+  
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20);
+  }
+  
+  /* Announcement Bar */
+.announcement-bar {
+    height: 35px;
+    background-color: #2380A3;
+  }
+
+.announcement-bar span {
+    display: flex;
+    padding-top: 7px;
+    color: #FFF;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  
+  /* Main Header */
+.header-container {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #FFF;
+  }
+  
+  /* Navigation Menu */
+.nav-menu {
+    display: flex;
+    position: fixed;
+    width: 100%; /* Fixed width for the menu */
+    white-space: nowrap; /* Prevent menu items from wrapping */
+
+  }
+  
+.nav-menu ul {
+    display: flex;
+    position:static;
+    justify-content: space-between; /* Equal spacing between items */
+    gap: 8px; /* Adjust spacing between menu items */
+    margin: 0;
+    padding-left: 110px;
+    padding-top: 10px;
+    list-style: none;
+  }
+  
+.nav-menu li {
+    flex: none; /* Prevent items from shrinking or growing */
+    width:min-content ;
+    text-align: center;
+    color: #002856;
+    padding-bottom: 4px;
+    border-bottom: 8px solid transparent; /* Transparent border reserves space */
+    transition: border-color ease; /* Smooth transition */
+    
+
+  }
+  
+
+
+.nav-menu li:hover span {
+    border-bottom: 4px solid #002856; /* Adds a line below without affecting layout */
+    
+
+  }
+
+
+  /* Responsive Adjustments */
+.nav-menu .menu-item {
+    flex: none;
+    padding-right: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Nunito Sans", serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+.nav-menu svg {
+    padding-left: 4px;
+  }
+
+  
+  /* Search Bar */
+.search-bar {
+  display: flex;
+  height: 34px;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 800px; 
+  padding-left: 15px;
+  
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+::placeholder {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.search-bar button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar button:hover {
+  background-color: #f0f0f0;
+}
+  /* User Actions */
+.user-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    margin-right: calc(10vw - 30px);
+    
+  }
+  
+.user-actions .sign-in {
+    flex: none;
+    color: #002856;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: "Nunito Sans";
+    font-weight: 600;
+    line-height: 10px;
+    text-align: right;
+    
+  }
+
+.separator {
+    display: inline-block;
+    width: 1px;
+    height: 34px;
+    background: #002856;
+    margin-right: 15%;
+}
+
+.icon-branch-locator {
+    display: inline-block;
+    padding-left: 15px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+  
+.icon-cart {
+    display: inline-block;
+    padding-left: 5px;
+    margin-right: 20%;
+    cursor: pointer;
+}
+
+  
+.user-actions .branch-locator {
+    background-image: url('branch-icon.png');
+  }
+  
+.user-actions .cart {
+    background-image: url('cart-icon.png');
+  }
+
+
+
+
+.logo-large {
+    display:block;
+    position: absolute;
+    top: 10px; 
+    bottom: 14px;
+    left: 10px;
+    z-index: 10; 
+    max-width: 95px; 
+    max-height: 95px;
+    height: auto;
+    cursor: pointer;
+  }
+
+.logo-small {
+    display: none;
+}
+
+@media (min-width: 1485px) {
+
+    .hamburger {
+        display: none;
+    }
+    .nav-menu {
+        padding-left: 5%;
+    }
+    .logo-large {
+        padding-left: 5%;
+    }
+
+    .user-actions {
+        display: flex;
+        align-items: center;
+        padding-right: 100px;
+        
+      }
+    
+    
+  }    
+
+
+
+@media (max-width: 1080px) {
+    .logo-large, .nav-menu ul {
+        display: none; 
+      }
+
+    .logo-small {
+        display: inline-flex;
+        padding-left: 8px;
+        position: absolute;
+        padding-top: 6px;
+
+    } 
+    
+    .hamburger {
+        display: inline-flex;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        margin-left: 15%;
+    }
+
+    .user-actions {
+        display: flex;
+        align-items: center;
+        padding-right: 10vw;
+        
+      }
+
+
+    
+    
+  
+  }
+
+
+@media (max-width: 767px) {
+
+    .search-bar {
+        display: none;
+    }
+
+    .user-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 95%;
+        
+      }
+
+    .icon-branch-locator {
+        display: none;
+        margin-left: 10%;
+    }
+
+    .announcement-bar span {
+        flex-wrap: wrap;
+    }
+
+    
+      
+  }  
+
+
+ @media (max-width: 430px) {
+
+    .search-bar {
+        display: block;
+        margin-left: 25vw;
+    }
+
+    .search-bar input {
+        margin-right: -28px;
+    }
+
+    ::placeholder {
+        opacity: 0;
+    }
+
+    .user-actions {
+        gap: 10px;
+        
+      }
+
+
+
+    
+      
+  }  
+
+
+  @media (max-width: 360px) {
+
+    .search-bar {
+        display: none;
+    }
+
+
+
+    
+      
+  }   
+
+
+

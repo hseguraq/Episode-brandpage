@@ -1,0 +1,231 @@
+/* Footer General Styles */
+.footer {
+    background-color: #1b2a38;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: var(--Gradients-Gradient-03, linear-gradient(147deg, #2380A3 13.25%, #2B566D 86.25%));
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+    padding-bottom: 3%;
+    cursor: pointer;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-rewards img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.learn-more {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.footer-bottom {
+    background: var(--Colors-Informational-Banner-Copy, #0C2239);
+    padding: 20px;
+    text-align: center;
+}
+
+.email-signup form {
+    display: flex;
+    justify-content: center;
+}
+
+.email-signup input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.email-signup button {
+    padding: 8px 12px;
+    background: var(--Colors-Informational-Banner-Copy, #0C2239);
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    color: var(--Primary-White, #FFF);
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.footer-button {
+    text-align: center;
+}
+
+.footer-button img {
+    width: 40px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+h3.sign-up {
+    color: var(--Primary-White, #FFF);
+    font-family: "Nunito Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.footer-buttons p {
+    color: var(--Primary-White, #FFF);
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px; /* 125% */
+
+}
+
+.footer-copyright {
+    color: #FFF;
+    font-family: "Nunito Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+.footer-copyright a {
+    color: #FFF;
+    font-family: "Nunito Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+/* Responsive: Tablet View */
+@media (max-width: 1024px) {
+
+    .footer-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 2px;
+    }
+
+    .footer-buttons {
+        flex-wrap: wrap;
+    }
+
+    .footer-section li {
+        margin: 0;
+        padding: 0;
+    }
+
+    
+}
+
+/* Responsive: Mobile View */
+@media (max-width: 768px) {
+    .footer-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-section {
+        text-align: left;
+    }
+
+    .footer-title {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .footer-title::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        width: 21px; /* Size of SVG */
+        height: 21px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='21' viewBox='0 0 22 21' fill='none'%3E%3Cpath d='M5.81812 8.1001L11.2181 13.5001L16.6181 8.1001' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: transform 0.3s ease;
+
+    }
+
+    .footer-title.active::after {
+        transform: rotate(180deg);
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-links.active {
+        display: block;
+    }
+}
